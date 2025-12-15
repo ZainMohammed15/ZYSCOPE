@@ -36,6 +36,27 @@ CORS_ORIGIN=http://localhost:5173
 
 ---
 
+
+---
+
+## Deployment (Railway + Vercel)
+
+### Backend (Railway)
+1. Push your code to GitHub.
+2. On Railway, create a new project and link your GitHub repo.
+3. Deploy your backend. Railway will provide a public backend URL (e.g., `https://your-railway-app.up.railway.app`).
+4. Set any required environment variables in Railway dashboard.
+
+### Frontend (Vercel)
+1. On Vercel, import your GitHub repo.
+2. In Vercel project settings, set the environment variable:
+	```
+	VITE_API_URL=https://your-railway-app.up.railway.app
+	```
+3. Deploy your frontend.
+
+---
+
 ## Run Locally
 
 - **Backend:** `node server.js`  

@@ -66,3 +66,5 @@ coverage/
 # Tool-specific
 .eslintignore
 .prettierignore
+# Ignore local SQLite database
+zyscope.sqlite

@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+build/
+.vite/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.pem
+
+# IDE & Editor metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+.DS_Store
+Thumbs.db
+.editorconfig
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+zyscope.sqlite
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+.cache/
+.eslintcache
+.stylelintcache
+
+# OS-specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# Testing
+.nyc_output/
+coverage/
+.mocha_output/
+
+# Tool-specific
+.eslintignore
+.prettierignore

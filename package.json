@@ -1,0 +1,35 @@
+{
+  "name": "zyscope",
+  "version": "1.0.0",
+  "description": "ZYSCOPE - An interactive travel exploration platform with city comparison, visit tracking, user profiles, and a retro arcade mini-game built with React, Phaser, and Leaflet.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "canvas": "^3.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "leaflet": "^1.9.4",
+    "phaser": "^3.90.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.22.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "pureimage": "^0.4.18",
+    "sharp": "^0.34.5",
+    "vite": "^5.1.0"
+  }
+}

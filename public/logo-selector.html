@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZYSCOPE Logo Variants</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #0f1116 0%, #12151c 40%, #0f1116 100%);
+      color: #f5f7fb;
+      font-family: "Segoe UI", Arial, sans-serif;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 36px;
+      background: linear-gradient(120deg, #ffde2f, #5ef0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .logos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .logo-card {
+      background: rgba(23, 27, 36, 0.8);
+      border: 1px solid #252a33;
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+      transition: all 200ms ease;
+      cursor: pointer;
+    }
+    
+    .logo-card:hover {
+      transform: translateY(-5px);
+      border-color: #ffde2f;
+      box-shadow: 0 12px 30px rgba(255, 222, 47, 0.2);
+    }
+    
+    .logo-preview {
+      background: #0f1116;
+      border-radius: 10px;
+      padding: 40px 20px;
+      margin-bottom: 20px;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #252a33;
+    }
+    
+    .logo-preview img {
+      max-width: 100%;
+      height: auto;
+      max-height: 100px;
+    }
+    
+    .logo-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffde2f;
+      margin-bottom: 10px;
+    }
+    
+    .logo-description {
+      font-size: 14px;
+      color: #a6adbb;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    
+    .select-btn {
+      background: #ffde2f;
+      color: #0c1317;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 120ms ease;
+      font-size: 14px;
+    }
+    
+    .select-btn:hover {
+      background: #5ef0ff;
+      transform: scale(1.05);
+    }
+    
+    .select-btn.active {
+      background: #00ff9f;
+      box-shadow: 0 0 20px rgba(0, 255, 159, 0.6);
+    }
+    
+    .instructions {
+      text-align: center;
+      color: #a6adbb;
+      font-size: 14px;
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255, 222, 47, 0.05);
+      border-radius: 10px;
+      border: 1px solid #ffde2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌍 ZYSCOPE Logo Variants</h1>
+    
+    <div class="logos-grid">
+      <!-- Premium Globe -->
+      <div class="logo-card">
+        <div class="logo-preview">
+          <img src="/logo-premium-globe.png" alt="Premium Globe">
+        </div>
+        <div class="logo-name">Premium Globe</div>
+        <div class="logo-description">
+          Global exploration with neon globe effect. Modern and vibrant for a worldwide audience.
+        </div>
+        <button class="select-btn" onclick="selectLogo('premium-globe')">Select</button>
+      </div>
+      
+      <!-- Minimalist Pin -->
+      <div class="logo-card">
+        <div class="logo-preview">
+          <img src="/logo-minimalist-pin.png" alt="Minimalist Pin">
+        </div>
+        <div class="logo-name">Minimalist Pin</div>
+        <div class="logo-description">
+          Clean map pin design. Emphasizes location discovery and navigation.
+        </div>
+        <button class="select-btn" onclick="selectLogo('minimalist-pin')">Select</button>
+      </div>
+      
+      <!-- Neon Compass -->
+      <div class="logo-card">
+        <div class="logo-preview">
+          <img src="/logo-neon-compass.png" alt="Neon Compass">
+        </div>
+        <div class="logo-name">Neon Compass</div>
+        <div class="logo-description">
+          Compass-inspired navigation design. Strong direction and guidance focus.
+        </div>
+        <button class="select-btn" onclick="selectLogo('neon-compass')">Select</button>
+      </div>
+      
+      <!-- Gradient Travel -->
+      <div class="logo-card">
+        <div class="logo-preview">
+          <img src="/logo-gradient-travel.png" alt="Gradient Travel">
+        </div>
+        <div class="logo-name">Gradient Travel</div>
+        <div class="logo-description">
+          Airplane icon with travel subtitles. Perfect for adventure and exploration theme.
+        </div>
+        <button class="select-btn" onclick="selectLogo('gradient-travel')">Select</button>
+      </div>
+      
+      <!-- Geometric Sphere -->
+      <div class="logo-card">
+        <div class="logo-preview">
+          <img src="/logo-geometric-sphere.png" alt="Geometric Sphere">
+        </div>
+        <div class="logo-name">Geometric Sphere</div>
+        <div class="logo-description">
+          Modern hexagon + sphere design. Premium tech feel with gradient text.
+        </div>
+        <button class="select-btn" onclick="selectLogo('geometric-sphere')">Select</button>
+      </div>
+    </div>
+    
+    <div class="instructions">
+      <strong>💡 How to choose:</strong> Click "Select" on your favorite logo variant. It will be set as your main ZYSCOPE logo!
+    </div>
+  </div>
+  
+  <script>
+    function selectLogo(name) {
+      // Update all buttons
+      document.querySelectorAll('.select-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Mark selected as active
+      event.target.classList.add('active');
+      
+      // Send to backend
+      fetch('/api/select-logo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ logoName: name })
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert(`✓ Logo updated to: ${name}!\n\nRefresh the page to see changes.`);
+      })
+      .catch(err => {
+        console.error('Error:', err);
+        alert('Error updating logo. Check console.');
+      });
+    }
+  </script>
+</body>
+</html>

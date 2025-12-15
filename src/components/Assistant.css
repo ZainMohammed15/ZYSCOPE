@@ -1,0 +1,138 @@
+/* Assistant Styles */
+.assistant-trigger {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent-neon));
+  border: 2px solid var(--accent-neon);
+  box-shadow: 0 4px 20px rgba(94, 240, 255, 0.4);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 200ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.assistant-trigger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(94, 240, 255, 0.6);
+}
+
+.assistant-icon {
+  font-size: 28px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.assistant-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 320px;
+  background: var(--panel);
+  border: 2px solid var(--accent-neon);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  gap: 12px;
+}
+
+.assistant-avatar {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.avatar-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--accent-neon);
+  opacity: 0.3;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.avatar-emoji {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  z-index: 1;
+}
+
+.assistant-content {
+  flex: 1;
+  position: relative;
+}
+
+.assistant-message {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding-right: 24px;
+}
+
+.assistant-dismiss {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--panel-strong);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 120ms ease;
+}
+
+.assistant-dismiss:hover {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .assistant-popup {
+    width: calc(100vw - 48px);
+    right: 24px;
+  }
+}

@@ -1,0 +1,80 @@
+<svg width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="greenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d084;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00a86b;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="0.8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle accent -->
+  <circle cx="20" cy="20" r="15" fill="none" stroke="#00d084" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Z Letter -->
+  <text x="8" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#greenGlow)" filter="url(#glow)">Z</text>
+  
+  <!-- Y Letter -->
+  <text x="30" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#greenGlow)" filter="url(#glow)">Y</text>
+  
+  <!-- S Letter -->
+  <text x="52" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#greenGlow)" filter="url(#glow)">S</text>
+  
+  <!-- C Letter -->
+  <text x="74" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#greenGlow)" filter="url(#glow)">C</text>
+  
+  <!-- O Letter -->
+  <text x="96" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#greenGlow)" filter="url(#glow)">O</text>
+  
+  <!-- P Letter -->
+  <text x="118" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#greenGlow)" filter="url(#glow)">P</text>
+  
+  <!-- E Letter -->
+  <text x="140" y="28" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#greenGlow)" filter="url(#glow)">E</text>
+  
+  <!-- Accent line under text -->
+  <line x1="8" y1="32" x2="155" y2="32" stroke="#00d084" stroke-width="1.5" opacity="0.6"/>
+</svg>
+  <!-- E -->
+  <path d="M196,8 L216,8 L216,13 L202,13 L202,17 L212,17 L212,22 L202,22 L202,27 L216,27 L216,32 L196,32 Z" 
+        fill="#FFFFFF" 
+        stroke="#000000" 
+        stroke-width="1.5"/>
+  
+  <!-- Accent bar -->
+  <rect x="30" y="36" width="186" height="2" fill="url(#gold)" rx="1"/>
+<svg width="640" height="220" viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ZYSCOPE logo">
+      <defs>
+            <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop stop-color="#ffffff" offset="0%" />
+                  <stop stop-color="#f4f4f4" offset="50%" />
+                  <stop stop-color="#d9d9d9" offset="100%" />
+            </linearGradient>
+            <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+                  <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="rgba(0,0,0,0.55)" />
+            </filter>
+            <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ffde2f"/>
+              <stop offset="100%" stop-color="#ffd84a"/>
+            </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="640" height="220" rx="28" fill="#0d0f15" stroke="#111622" stroke-width="8" />
+      <g filter="url(#shadow)">
+            <text x="40" y="150" font-family="'Impact','Arial Black','Segoe UI Black',sans-serif" font-size="136" fill="url(#g)" stroke="#0a0a0a" stroke-width="10" paint-order="stroke" letter-spacing="2">
+                  ZYSCOPE
+            </text>
+      </g>
+      <g filter="url(#shadow)">
+            <text x="40" y="130" font-family="Pricedown, Impact, Arial Black, sans-serif" font-size="108" fill="#ffffff" stroke="#000000" stroke-width="8">ZYSCOPE</text>
+            <text x="40" y="130" font-family="Pricedown, Impact, Arial Black, sans-serif" font-size="108" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.9">ZYSCOPE</text>
+      </g>
+      <g transform="translate(520,60)">
+        <polygon points="0,-34 20,-10 46,-6 28,10 32,36 0,22 -32,36 -28,10 -46,-6 -20,-10" fill="url(#accent)" stroke="#0a0a0a" stroke-width="4"/>
+      </g>
+      </g>
+</svg>

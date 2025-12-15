@@ -1,0 +1,61 @@
+/* Logo Component CSS - Alternative if you prefer separate file */
+
+.logo-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 180ms ease;
+  user-select: none;
+}
+
+.logo-container:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.logo-container:active {
+  transform: scale(0.98);
+}
+
+.logo-svg {
+  height: 42px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+.logo-svg:hover {
+  filter: drop-shadow(0 2px 12px rgba(127, 216, 190, 0.3));
+}
+
+/* Responsive logo sizes */
+@media (max-width: 768px) {
+  .logo-svg {
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-svg {
+    height: 32px;
+  }
+}
+
+/* Favicon display (if you want to show favicon in some components) */
+.favicon-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.favicon-icon-small {
+  width: 24px;
+  height: 24px;
+}
+
+.favicon-icon-large {
+  width: 48px;
+  height: 48px;
+}

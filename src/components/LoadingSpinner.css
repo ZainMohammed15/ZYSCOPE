@@ -1,0 +1,91 @@
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 17, 22, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.earth {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #1e90ff, #1565c0 40%, #0a3d62 70%, #051e34);
+  box-shadow: 
+    0 0 30px rgba(30, 144, 255, 0.8),
+    0 0 50px rgba(0, 191, 255, 0.4),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.6),
+    inset 3px 3px 10px rgba(255, 255, 255, 0.2);
+  animation: spin 3s linear infinite;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(30, 144, 255, 0.3);
+}
+
+.continents {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    /* Africa */
+    radial-gradient(ellipse 18px 22px at 48% 55%, rgba(34, 139, 34, 0.85) 40%, transparent 70%),
+    radial-gradient(ellipse 12px 18px at 52% 45%, rgba(46, 125, 50, 0.9) 35%, transparent 65%),
+    /* Europe */
+    radial-gradient(ellipse 10px 8px at 45% 30%, rgba(34, 139, 34, 0.8) 45%, transparent 70%),
+    /* Americas */
+    radial-gradient(ellipse 14px 20px at 20% 40%, rgba(46, 125, 50, 0.85) 40%, transparent 70%),
+    radial-gradient(ellipse 10px 16px at 25% 60%, rgba(34, 139, 34, 0.8) 35%, transparent 65%),
+    /* Asia */
+    radial-gradient(ellipse 20px 18px at 65% 35%, rgba(46, 125, 50, 0.9) 40%, transparent 70%),
+    radial-gradient(ellipse 15px 12px at 72% 40%, rgba(34, 139, 34, 0.85) 35%, transparent 65%),
+    /* Australia */
+    radial-gradient(ellipse 8px 6px at 75% 65%, rgba(34, 139, 34, 0.8) 45%, transparent 70%),
+    /* Additional landmass details */
+    radial-gradient(circle at 38% 25%, rgba(46, 125, 50, 0.7) 3%, transparent 3%),
+    radial-gradient(circle at 55% 50%, rgba(34, 139, 34, 0.7) 2.5%, transparent 2.5%),
+    radial-gradient(circle at 68% 32%, rgba(46, 125, 50, 0.75) 2%, transparent 2%);
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+/* 3D perspective for Earth */
+.earth {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.loading-spinner::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(30, 144, 255, 0.2);
+  border-top: 2px solid rgba(30, 144, 255, 0.8);
+  border-radius: 50%;
+  animation: spin-border 1.5s linear infinite;
+}
+
+@keyframes spin-border {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -64,3 +64,4 @@ CORS_ORIGIN=http://localhost:5173
 
 Open source. Feel free to fork and share with attribution.
 
+# ZYSCOPE
